@@ -18,6 +18,7 @@
 		655810EE17859EEE00574613 /* NSFont+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810EC17859EEE00574613 /* NSFont+ECUIKit.m */; };
 		655810F117859F8B00574613 /* NSString+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 655810EF17859F8B00574613 /* NSString+ECUIKit.h */; };
 		655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810F017859F8B00574613 /* NSString+ECUIKit.m */; };
+		655811071785AC1800574613 /* ECLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 655811051785AC1800574613 /* ECLog.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		655810EC17859EEE00574613 /* NSFont+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+ECUIKit.m"; sourceTree = "<group>"; };
 		655810EF17859F8B00574613 /* NSString+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECUIKit.h"; sourceTree = "<group>"; };
 		655810F017859F8B00574613 /* NSString+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECUIKit.m"; sourceTree = "<group>"; };
+		655811051785AC1800574613 /* ECLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				655810C117859DFC00574613 /* ECUIKit.h */,
 				655810C217859DFC00574613 /* ECUIKit.m */,
+				655811051785AC1800574613 /* ECLog.h */,
 				655810EB17859EEE00574613 /* NSFont+ECUIKit.h */,
 				655810EC17859EEE00574613 /* NSFont+ECUIKit.m */,
 				655810EF17859F8B00574613 /* NSString+ECUIKit.h */,
@@ -158,6 +161,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655811071785AC1800574613 /* ECLog.h in Headers */,
 				655810F117859F8B00574613 /* NSString+ECUIKit.h in Headers */,
 				655810ED17859EEE00574613 /* NSFont+ECUIKit.h in Headers */,
 			);

@@ -22,7 +22,13 @@
 #define ECBezierPath NSBezierPath
 #endif
 
-#if !TARGET_OS_IPHONE
+#define ECRGBCOLOR(r,g,b) [ECColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+
+#import "ECLog.h"
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#else
 #import "NSFont+ECUIKit.h"
 #import "NSString+ECUIKit.h"
 #endif
