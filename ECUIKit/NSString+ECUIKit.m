@@ -10,8 +10,6 @@
 
 #import <objc/runtime.h>
 
-NSString *const FKStringSizeCache = @"FKStringSizeCache";
-
 #pragma mark - NSString (ECUIKit)
 
 @implementation NSString (ECUIKit)
