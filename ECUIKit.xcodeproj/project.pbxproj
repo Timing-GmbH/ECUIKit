@@ -19,6 +19,10 @@
 		655810F117859F8B00574613 /* NSString+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 655810EF17859F8B00574613 /* NSString+ECUIKit.h */; };
 		655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810F017859F8B00574613 /* NSString+ECUIKit.m */; };
 		655811071785AC1800574613 /* ECLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 655811051785AC1800574613 /* ECLog.h */; };
+		659362A7178B1C360033571C /* NSView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 659362A5178B1C360033571C /* NSView+ECUIKit.h */; };
+		659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659362A6178B1C360033571C /* NSView+ECUIKit.m */; };
+		659362AB178B1C640033571C /* NSScrollView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */; };
+		659362AC178B1C640033571C /* NSScrollView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		655810EF17859F8B00574613 /* NSString+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECUIKit.h"; sourceTree = "<group>"; };
 		655810F017859F8B00574613 /* NSString+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECUIKit.m"; sourceTree = "<group>"; };
 		655811051785AC1800574613 /* ECLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLog.h; sourceTree = "<group>"; };
+		659362A5178B1C360033571C /* NSView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ECUIKit.h"; sourceTree = "<group>"; };
+		659362A6178B1C360033571C /* NSView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ECUIKit.m"; sourceTree = "<group>"; };
+		659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScrollView+ECUIKit.h"; sourceTree = "<group>"; };
+		659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScrollView+ECUIKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,10 @@
 				655810EC17859EEE00574613 /* NSFont+ECUIKit.m */,
 				655810EF17859F8B00574613 /* NSString+ECUIKit.h */,
 				655810F017859F8B00574613 /* NSString+ECUIKit.m */,
+				659362A5178B1C360033571C /* NSView+ECUIKit.h */,
+				659362A6178B1C360033571C /* NSView+ECUIKit.m */,
+				659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */,
+				659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */,
 				655810BF17859DFC00574613 /* Supporting Files */,
 			);
 			path = ECUIKit;
@@ -163,7 +175,9 @@
 			files = (
 				655811071785AC1800574613 /* ECLog.h in Headers */,
 				655810F117859F8B00574613 /* NSString+ECUIKit.h in Headers */,
+				659362AB178B1C640033571C /* NSScrollView+ECUIKit.h in Headers */,
 				655810ED17859EEE00574613 /* NSFont+ECUIKit.h in Headers */,
+				659362A7178B1C360033571C /* NSView+ECUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */,
 				655810C317859DFC00574613 /* ECUIKit.m in Sources */,
+				659362AC178B1C640033571C /* NSScrollView+ECUIKit.m in Sources */,
 				655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */,
 				655810EE17859EEE00574613 /* NSFont+ECUIKit.m in Sources */,
 			);
@@ -427,6 +443,7 @@
 				655810DB17859DFC00574613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		655810DC17859DFC00574613 /* Build configuration list for PBXNativeTarget "ECUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +452,7 @@
 				655810DE17859DFC00574613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
