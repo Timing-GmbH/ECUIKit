@@ -14,6 +14,4 @@
 
 - (NSFont *)fontWithSize:(CGFloat)size;
 
-- (NSFont *)italicVariant;
-
 @end
