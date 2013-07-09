@@ -13,7 +13,7 @@
 #define ECLOGLEVEL_ERROR    1
 
 #ifndef ECMAXLOGLEVEL
-#define ECMAXLOGLEVEL ECLOGLEVEL_WARNING
+#define ECMAXLOGLEVEL ECLOGLEVEL_INFO
 #endif
 
 // The general purpose logger. This ignores logging levels.
