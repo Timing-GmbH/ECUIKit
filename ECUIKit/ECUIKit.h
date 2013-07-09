@@ -15,6 +15,7 @@
 #define ECImage UIImage
 #define ECColor UIColor
 #define ECView UIView
+#define ECScrollView UIScrollView
 #define ECBezierPath UIBezierPath
 
 #define ECRGBCOLOR(r,g,b) [ECColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
@@ -27,6 +28,7 @@
 #define ECImage NSImage
 #define ECColor NSColor
 #define ECView NSView
+#define ECScrollView NSScrollView
 #define ECBezierPath NSBezierPath
 
 #define UIGraphicsPushContext(ctx) { [NSGraphicsContext saveGraphicsState]; \
