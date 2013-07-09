@@ -25,6 +25,7 @@
 
 - (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font
 {
+	//! TODO_MAC: add colored drawing!
 	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font }];
 	return [self sizeWithFont:font];
 }

@@ -48,6 +48,7 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 #else
 #import "NSFont+ECUIKit.h"
 #import "NSString+ECUIKit.h"
+#import "NSBezierPath+ECUIKit.h"
 #import "NSView+ECUIKit.h"
 #import "NSScrollView+ECUIKit.h"
 #endif
