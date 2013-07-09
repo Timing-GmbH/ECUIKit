@@ -20,7 +20,7 @@
 }
 - (CGSize)sizeWithFont:(NSFont *)font constrainedToSize:(CGSize)size
 {
-	return [self boundingRectWithSize:size options:0 attributes:@{ NSFontAttributeName : font }].size;
+	return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font }].size;
 }
 
 - (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font
