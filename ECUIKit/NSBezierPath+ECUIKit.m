@@ -16,7 +16,11 @@
 }
 - (void)addArcWithCenter:(CGPoint)center radius:(CGFloat)radius startAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle clockwise:(BOOL)clockwise
 {
-	[self appendBezierPathWithArcWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:clockwise];
+	[self appendBezierPathWithArcWithCenter:center
+									 radius:radius
+								 startAngle:(startAngle * 180. / M_PI)
+								   endAngle:(endAngle * 180. / M_PI)
+								  clockwise:!clockwise];
 }
 
 - (void)applyTransform:(CGAffineTransform)transform
