@@ -31,6 +31,14 @@
 #define ECScrollView NSScrollView
 #define ECBezierPath NSBezierPath
 
+#define UIFont ECFont
+#define UIImage ECImage
+#define UIColor ECColor
+#define UIView ECView
+#define UIScrollView ECScrollView
+#define UIBezierPath ECBezierPath
+
+#define UIGraphicsGetCurrentContext() ((CGContextRef)[[NSGraphicsContext currentContext] graphicsPort])
 #define UIGraphicsPushContext(ctx) { [NSGraphicsContext saveGraphicsState]; \
 NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ctx flipped:YES]; \
 [NSGraphicsContext setCurrentContext:nscg]; }
@@ -49,6 +57,8 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 #import "NSFont+ECUIKit.h"
 #import "NSString+ECUIKit.h"
 #import "NSBezierPath+ECUIKit.h"
+#import "NSValue+ECUIKit.h"
+
 #import "NSView+ECUIKit.h"
 #import "NSScrollView+ECUIKit.h"
 #endif
