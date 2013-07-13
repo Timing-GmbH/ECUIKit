@@ -10,8 +10,14 @@
 
 #define UIViewAutoresizingFlexibleWidth NSViewWidthSizable
 #define UIViewAutoresizingFlexibleHeight NSViewHeightSizable
+#define UIViewAutoresizingFlexibleLeftMargin NSViewMinXMargin
+#define UIViewAutoresizingFlexibleRightMargin NSViewMaxXMargin
+#define UIViewAutoresizingFlexibleTopMargin NSViewMinYMargin
+#define UIViewAutoresizingFlexibleBottomMargin NSViewMaxYMargin
 
 @interface NSView (ECUIKit)
+
+@property (nonatomic) CGFloat alpha;
 
 - (void)setNeedsDisplay;
 

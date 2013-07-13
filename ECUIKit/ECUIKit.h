@@ -27,16 +27,21 @@
 #define ECFont NSFont
 #define ECImage NSImage
 #define ECColor NSColor
+#define ECBezierPath NSBezierPath
 #define ECView NSView
 #define ECScrollView NSScrollView
-#define ECBezierPath NSBezierPath
+#define ECImageView NSImageView
+#define ECButton NSButton
+
 
 #define UIFont ECFont
 #define UIImage ECImage
 #define UIColor ECColor
+#define UIBezierPath ECBezierPath
 #define UIView ECView
 #define UIScrollView ECScrollView
-#define UIBezierPath ECBezierPath
+#define UIImageView ECImageView
+#define UIButton ECButton
 
 #define UIGraphicsGetCurrentContext() ((CGContextRef)[[NSGraphicsContext currentContext] graphicsPort])
 #define UIGraphicsPushContext(ctx) { [NSGraphicsContext saveGraphicsState]; \

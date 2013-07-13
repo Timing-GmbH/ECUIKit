@@ -10,4 +10,8 @@
 
 @interface NSValue (ECUIKit)
 
++ (instancetype)valueWithCGPoint:(CGPoint)point;
+
+- (CGPoint)CGPointValue;
+
 @end

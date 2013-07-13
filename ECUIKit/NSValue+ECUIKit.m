@@ -10,4 +10,14 @@
 
 @implementation NSValue (ECUIKit)
 
++ (instancetype)valueWithCGPoint:(CGPoint)point
+{
+	return [self valueWithPoint:point];
+}
+
+- (CGPoint)CGPointValue
+{
+	return [self pointValue];
+}
+
 @end

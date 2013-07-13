@@ -10,6 +10,15 @@
 
 @implementation NSView (ECUIKit)
 
+- (CGFloat)alpha
+{
+	return self.alphaValue;
+}
+- (void)setAlpha:(CGFloat)alpha
+{
+	self.alphaValue = alpha;
+}
+
 - (void)setNeedsDisplay
 {
 	[self setNeedsDisplay:YES];
