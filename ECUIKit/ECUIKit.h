@@ -43,6 +43,10 @@
 #define UIImageView ECImageView
 #define UIButton ECButton
 
+
+#define didMoveToSuperview viewDidMoveToSuperview
+
+
 #define UIGraphicsGetCurrentContext() ((CGContextRef)[[NSGraphicsContext currentContext] graphicsPort])
 #define UIGraphicsPushContext(ctx) { [NSGraphicsContext saveGraphicsState]; \
 NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ctx flipped:YES]; \
