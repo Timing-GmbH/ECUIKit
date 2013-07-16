@@ -47,6 +47,12 @@
 #define UIDocumentChangeDone NSChangeDone
 
 
+#define EAGLContext NSOpenGLContext
+#define glGenVertexArraysOES glGenVertexArrays
+#define glBindVertexArrayOES glBindVertexArray
+#define glDeleteVertexArraysOES glDeleteVertexArrays
+
+
 #define didMoveToSuperview viewDidMoveToSuperview
 
 
@@ -71,6 +77,7 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 #import "NSString+ECUIKit.h"
 #import "NSBezierPath+ECUIKit.h"
 #import "NSValue+ECUIKit.h"
+#import "NSOpenGLContext+ECUIKit.h"
 
 #import "NSView+ECUIKit.h"
 #import "NSScrollView+ECUIKit.h"
