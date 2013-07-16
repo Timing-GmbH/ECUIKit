@@ -43,6 +43,9 @@
 #define UIImageView ECImageView
 #define UIButton ECButton
 
+#define UIDocument NSDocument
+#define UIDocumentChangeDone NSChangeDone
+
 
 #define didMoveToSuperview viewDidMoveToSuperview
 
@@ -53,6 +56,7 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 [NSGraphicsContext setCurrentContext:nscg]; }
 #define UIGraphicsPopContext() [NSGraphicsContext restoreGraphicsState];
 
+#define colorWithRed colorWithSRGBRed
 #define ECRGBCOLOR(r,g,b) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define ECRGBACOLOR(r,g,b,a) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
