@@ -29,7 +29,6 @@
 #define ECColor NSColor
 #define ECBezierPath NSBezierPath
 #define ECView NSView
-#define ECScrollView NSScrollView
 #define ECImageView NSImageView
 #define ECButton NSButton
 

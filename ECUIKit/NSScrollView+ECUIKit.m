@@ -8,7 +8,7 @@
 
 #import "NSScrollView+ECUIKit.h"
 
-@implementation NSScrollView (ECUIKit)
+@implementation ECScrollView
 
 - (void)setContentSize:(CGSize)contentSize
 {

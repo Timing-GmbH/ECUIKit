@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NSScrollView (ECUIKit)
+@interface ECScrollView : NSScrollView
 
 @property (nonatomic) CGSize contentSize;
 @property (nonatomic) CGPoint contentOffset;
