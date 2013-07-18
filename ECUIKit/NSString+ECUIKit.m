@@ -25,7 +25,6 @@
 
 - (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font
 {
-	//! TODO_MAC: add colored drawing!
 	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font }];
 	return [self sizeWithFont:font];
 }
@@ -34,6 +33,12 @@
 {
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font }];
 	return [self sizeWithFont:font constrainedToSize:rect.size];
+}
+
+- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font andColor:(NSColor *)color
+{
+	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }];
+	return [self sizeWithFont:font];
 }
 
 @end
