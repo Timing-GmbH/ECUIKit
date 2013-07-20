@@ -31,6 +31,8 @@
 		65DEE03C178C5062007D63AC /* NSBezierPath+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE03A178C5062007D63AC /* NSBezierPath+ECUIKit.m */; };
 		65E85E6117954598008C4B2B /* NSOpenGLContext+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E85E5F17954598008C4B2B /* NSOpenGLContext+ECUIKit.h */; };
 		65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E85E6017954598008C4B2B /* NSOpenGLContext+ECUIKit.m */; };
+		65ED4B41179B163F00558684 /* NSTableView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */; };
+		65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		65DEE03A178C5062007D63AC /* NSBezierPath+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+ECUIKit.m"; sourceTree = "<group>"; };
 		65E85E5F17954598008C4B2B /* NSOpenGLContext+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOpenGLContext+ECUIKit.h"; sourceTree = "<group>"; };
 		65E85E6017954598008C4B2B /* NSOpenGLContext+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOpenGLContext+ECUIKit.m"; sourceTree = "<group>"; };
+		65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ECUIKit.h"; sourceTree = "<group>"; };
+		65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ECUIKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 				65B8AFD31791721600085F8F /* NSButton+ECUIKit.m */,
 				659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */,
 				659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */,
+				65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */,
+				65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */,
 				655810BF17859DFC00574613 /* Supporting Files */,
 			);
 			path = ECUIKit;
@@ -205,6 +211,7 @@
 				655810ED17859EEE00574613 /* NSFont+ECUIKit.h in Headers */,
 				65B8AFD41791721600085F8F /* NSButton+ECUIKit.h in Headers */,
 				659362A7178B1C360033571C /* NSView+ECUIKit.h in Headers */,
+				65ED4B41179B163F00558684 /* NSTableView+ECUIKit.h in Headers */,
 				65E85E6117954598008C4B2B /* NSOpenGLContext+ECUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +300,7 @@
 				659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */,
 				655810C317859DFC00574613 /* ECUIKit.m in Sources */,
 				659362AC178B1C640033571C /* NSScrollView+ECUIKit.m in Sources */,
+				65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */,
 				65B8AFD51791721600085F8F /* NSButton+ECUIKit.m in Sources */,
 				65DEE03C178C5062007D63AC /* NSBezierPath+ECUIKit.m in Sources */,
 				65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */,

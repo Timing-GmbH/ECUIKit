@@ -80,4 +80,5 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 
 #import "NSView+ECUIKit.h"
 #import "NSScrollView+ECUIKit.h"
+#import "NSTableView+ECUIKit.h"
 #endif
