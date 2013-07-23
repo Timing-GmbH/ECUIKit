@@ -30,10 +30,30 @@
 				 animations:(void (^)(void))animations
 				 completion:(void (^)(BOOL finished))completion
 {
-	if (animations)
-		animations();
-	if (completion)
-		completion(YES);
+	void (^animationBlock)() = ^{
+		[NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+			context.allowsImplicitAnimation = YES;
+			context.duration = duration;
+			
+			if (animations)
+				animations();
+		} completionHandler:^{
+			if (completion)
+				completion(YES);
+		}];
+	};
+	
+	if (!delay)
+	{
+		animationBlock();
+		return;
+	}
+	
+	double delayInSeconds = delay;
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		animationBlock();
+	});
 }
 
 + (void)animateWithDuration:(NSTimeInterval)duration
