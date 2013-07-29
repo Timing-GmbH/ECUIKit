@@ -41,4 +41,13 @@
 	return [self sizeWithFont:font];
 }
 
+- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment
+{
+	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+	paragraphStyle.lineBreakMode = lineBreakMode;
+	paragraphStyle.alignment = alignment;
+	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }];
+	return [self sizeWithFont:font];
+}
+
 @end

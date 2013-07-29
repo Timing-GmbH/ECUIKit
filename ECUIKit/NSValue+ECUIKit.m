@@ -8,16 +8,24 @@
 
 #import "NSValue+ECUIKit.h"
 
-@implementation NSValue (ECUIKit)
+/*@implementation NSValue (ECUIKit)
 
 + (instancetype)valueWithCGPoint:(CGPoint)point
 {
 	return [self valueWithPoint:point];
 }
-
 - (CGPoint)CGPointValue
 {
 	return [self pointValue];
 }
 
-@end
++ (instancetype)valueWithCGRect:(CGRect)rect
+{
+	return [self valueWithRect:rect];
+}
+- (CGRect)CGRectValue
+{
+	return [self rectValue];
+}
+
+@end*/

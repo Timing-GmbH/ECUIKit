@@ -25,6 +25,10 @@
 		659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659362A6178B1C360033571C /* NSView+ECUIKit.m */; };
 		659362AB178B1C640033571C /* NSScrollView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */; };
 		659362AC178B1C640033571C /* NSScrollView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */; };
+		65B364FA17A1508B00DB7C53 /* ECPrintPageRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B364F817A1508B00DB7C53 /* ECPrintPageRenderer.h */; };
+		65B364FB17A1508B00DB7C53 /* ECPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B364F917A1508B00DB7C53 /* ECPrintPageRenderer.m */; };
+		65B364FE17A150B600DB7C53 /* ECPrintFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B364FC17A150B600DB7C53 /* ECPrintFormatter.h */; };
+		65B364FF17A150B600DB7C53 /* ECPrintFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B364FD17A150B600DB7C53 /* ECPrintFormatter.m */; };
 		65B8AFD41791721600085F8F /* NSButton+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B8AFD21791721600085F8F /* NSButton+ECUIKit.h */; };
 		65B8AFD51791721600085F8F /* NSButton+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8AFD31791721600085F8F /* NSButton+ECUIKit.m */; };
 		65DEE03B178C5062007D63AC /* NSBezierPath+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65DEE039178C5062007D63AC /* NSBezierPath+ECUIKit.h */; };
@@ -70,6 +74,10 @@
 		659362A6178B1C360033571C /* NSView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ECUIKit.m"; sourceTree = "<group>"; };
 		659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScrollView+ECUIKit.h"; sourceTree = "<group>"; };
 		659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScrollView+ECUIKit.m"; sourceTree = "<group>"; };
+		65B364F817A1508B00DB7C53 /* ECPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrintPageRenderer.h; sourceTree = "<group>"; };
+		65B364F917A1508B00DB7C53 /* ECPrintPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPrintPageRenderer.m; sourceTree = "<group>"; };
+		65B364FC17A150B600DB7C53 /* ECPrintFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrintFormatter.h; sourceTree = "<group>"; };
+		65B364FD17A150B600DB7C53 /* ECPrintFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPrintFormatter.m; sourceTree = "<group>"; };
 		65B8AFD21791721600085F8F /* NSButton+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+ECUIKit.h"; sourceTree = "<group>"; };
 		65B8AFD31791721600085F8F /* NSButton+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+ECUIKit.m"; sourceTree = "<group>"; };
 		65DEE039178C5062007D63AC /* NSBezierPath+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+ECUIKit.h"; sourceTree = "<group>"; };
@@ -165,6 +173,10 @@
 				659362AA178B1C640033571C /* NSScrollView+ECUIKit.m */,
 				65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */,
 				65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */,
+				65B364F817A1508B00DB7C53 /* ECPrintPageRenderer.h */,
+				65B364F917A1508B00DB7C53 /* ECPrintPageRenderer.m */,
+				65B364FC17A150B600DB7C53 /* ECPrintFormatter.h */,
+				65B364FD17A150B600DB7C53 /* ECPrintFormatter.m */,
 				655810BF17859DFC00574613 /* Supporting Files */,
 			);
 			path = ECUIKit;
@@ -212,6 +224,8 @@
 				65B8AFD41791721600085F8F /* NSButton+ECUIKit.h in Headers */,
 				659362A7178B1C360033571C /* NSView+ECUIKit.h in Headers */,
 				65ED4B41179B163F00558684 /* NSTableView+ECUIKit.h in Headers */,
+				65B364FE17A150B600DB7C53 /* ECPrintFormatter.h in Headers */,
+				65B364FA17A1508B00DB7C53 /* ECPrintPageRenderer.h in Headers */,
 				65E85E6117954598008C4B2B /* NSOpenGLContext+ECUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +313,7 @@
 			files = (
 				659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */,
 				655810C317859DFC00574613 /* ECUIKit.m in Sources */,
+				65B364FB17A1508B00DB7C53 /* ECPrintPageRenderer.m in Sources */,
 				659362AC178B1C640033571C /* NSScrollView+ECUIKit.m in Sources */,
 				65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */,
 				65B8AFD51791721600085F8F /* NSButton+ECUIKit.m in Sources */,
@@ -306,6 +321,7 @@
 				65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */,
 				655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */,
 				655810EE17859EEE00574613 /* NSFont+ECUIKit.m in Sources */,
+				65B364FF17A150B600DB7C53 /* ECPrintFormatter.m in Sources */,
 				65749434178D7EB5002BE75B /* NSValue+ECUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

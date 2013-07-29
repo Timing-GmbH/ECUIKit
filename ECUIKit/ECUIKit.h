@@ -45,6 +45,15 @@
 #define UIDocument NSDocument
 #define UIDocumentChangeDone NSChangeDone
 
+#define UIPrintPageRenderer ECPrintPageRenderer
+#define UIPrintFormatter ECPrintFormatter
+
+#define UIEdgeInsets NSEdgeInsets
+#define UIEdgeInsetsMake(a, b, c, d) NSEdgeInsetsMake(a, b, c, d)
+
+#define NSTextAlignmentLeft NSLeftTextAlignment
+#define NSTextAlignmentRight NSRightTextAlignment
+#define NSTextAlignmentCenter NSCenterTextAlignment
 
 #define EAGLContext NSOpenGLContext
 #define glGenVertexArraysOES glGenVertexArrays
@@ -81,4 +90,7 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 #import "NSView+ECUIKit.h"
 #import "NSScrollView+ECUIKit.h"
 #import "NSTableView+ECUIKit.h"
+
+#import "ECPrintPageRenderer.h"
+#import "ECPrintFormatter.h"
 #endif

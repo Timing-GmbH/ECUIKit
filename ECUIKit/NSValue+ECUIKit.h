@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSValue (ECUIKit)
+#define valueWithCGPoint valueWithPoint
+#define CGPointValue pointValue
+
+#define valueWithCGRect valueWithRect
+#define CGRectValue rectValue
+
+/*@interface NSValue (ECUIKit)
 
 + (instancetype)valueWithCGPoint:(CGPoint)point;
-
 - (CGPoint)CGPointValue;
 
-@end
++ (instancetype)valueWithCGRect:(CGRect)rect;
+- (CGRect)CGRectValue;
+
+@end*/

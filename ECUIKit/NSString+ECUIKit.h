@@ -16,5 +16,6 @@
 - (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font;
 - (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font;
 - (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font andColor:(NSColor *)color;
+- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
 
 @end
