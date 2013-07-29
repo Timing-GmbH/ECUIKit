@@ -8,6 +8,8 @@
 
 #import "ECPrintPageRenderer.h"
 
+const CGFloat pagePadding = 10;
+
 @implementation ECPrintPageRenderer
 {
 	NSMutableArray *_printFormatters;
@@ -58,14 +60,14 @@
 - (NSRect)rectForPage:(NSInteger)page
 {
 	CGRect printableRect = self.printableRect;
-	return CGRectMake(0, printableRect.size.height * (page - 1), printableRect.size.width, printableRect.size.height);
+	return CGRectMake(0, printableRect.size.height * (page - 1), printableRect.size.width + 2 * pagePadding, printableRect.size.height + 2 * pagePadding);
 }
 - (void)drawRect:(NSRect)dirtyRect
 {
 	NSInteger pageIndex = dirtyRect.origin.y / self.printableRect.size.height;
 	[NSGraphicsContext saveGraphicsState];
 	NSAffineTransform *rectTransform = [NSAffineTransform transform];
-	[rectTransform translateXBy:0 yBy:(self.printableRect.size.height * pageIndex)];
+	[rectTransform translateXBy:pagePadding yBy:(self.printableRect.size.height * pageIndex + pagePadding)];
 	[rectTransform concat];
 	[self drawPageAtIndex:pageIndex inRect:self.printableRect];
 	[NSGraphicsContext restoreGraphicsState];
