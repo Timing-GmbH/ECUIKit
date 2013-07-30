@@ -58,7 +58,7 @@
 		655810C017859DFC00574613 /* ECUIKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECUIKit-Prefix.pch"; sourceTree = "<group>"; };
 		655810C117859DFC00574613 /* ECUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECUIKit.h; sourceTree = "<group>"; };
 		655810C217859DFC00574613 /* ECUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECUIKit.m; sourceTree = "<group>"; };
-		655810C817859DFC00574613 /* ECUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = ECUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		655810C817859DFC00574613 /* ECUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		655810C917859DFC00574613 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		655810D117859DFC00574613 /* ECUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECUIKitTests-Info.plist"; sourceTree = "<group>"; };
 		655810D317859DFC00574613 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
