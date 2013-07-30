@@ -12,6 +12,11 @@
 
 @implementation NSFont (ECUIKit)
 
++ (CGFloat)buttonFontSize
+{
+	return [self systemFontSizeForControlSize:NSRegularControlSize];
+}
+
 - (CGFloat)lineHeight
 {
 	return (self.ascender - self.descender) + 1;

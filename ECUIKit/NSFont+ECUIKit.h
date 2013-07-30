@@ -10,6 +10,8 @@
 
 @interface NSFont (ECUIKit)
 
++ (CGFloat)buttonFontSize;
+
 @property (nonatomic, readonly) CGFloat lineHeight;
 
 - (NSFont *)fontWithSize:(CGFloat)size;
