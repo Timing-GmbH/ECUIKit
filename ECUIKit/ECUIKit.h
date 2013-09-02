@@ -72,6 +72,8 @@
 
 #import "ECLog.h"
 
+#import "ECCoreGraphics.h"
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #else
@@ -87,6 +89,4 @@
 
 #import "ECPrintPageRenderer.h"
 #import "ECPrintFormatter.h"
-
-#import "ECCoreGraphics.h"
 #endif

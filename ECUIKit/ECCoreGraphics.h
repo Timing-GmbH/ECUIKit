@@ -10,14 +10,18 @@
 
 #import "ECUIKit.h"
 
+#if !TARGET_OS_IPHONE
 CGContextRef UIGraphicsGetCurrentContext();
 void UIGraphicsPushContext(CGContextRef context);
 void UIGraphicsPopContext();
+#else
+#import <UIKit/UIKit.h>
+#endif
 
 static UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, void (^drawBlock)())
 {
 #if TARGET_OS_IPHONE
-	UIGraphicsBeginImageContextWithOptions(contentsRect.size, opaque, scale);
+	UIGraphicsBeginImageContextWithOptions(size, opaque, scale);
 	if (drawBlock)
 		drawBlock();
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
