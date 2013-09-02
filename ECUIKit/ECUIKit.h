@@ -64,12 +64,6 @@
 #define didMoveToSuperview viewDidMoveToSuperview
 
 
-#define UIGraphicsGetCurrentContext() ((CGContextRef)[[NSGraphicsContext currentContext] graphicsPort])
-#define UIGraphicsPushContext(ctx) { [NSGraphicsContext saveGraphicsState]; \
-NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ctx flipped:YES]; \
-[NSGraphicsContext setCurrentContext:nscg]; }
-#define UIGraphicsPopContext() [NSGraphicsContext restoreGraphicsState];
-
 #define colorWithRed colorWithSRGBRed
 #define ECRGBCOLOR(r,g,b) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define ECRGBACOLOR(r,g,b,a) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
@@ -93,4 +87,6 @@ NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:ct
 
 #import "ECPrintPageRenderer.h"
 #import "ECPrintFormatter.h"
+
+#import "ECCoreGraphics.h"
 #endif

@@ -10,6 +10,10 @@
 
 @implementation ECScrollView
 
+- (CGSize)contentSize
+{
+	return [self.documentView frame].size;
+}
 - (void)setContentSize:(CGSize)contentSize
 {
 	[self.documentView setFrameSize:contentSize];
