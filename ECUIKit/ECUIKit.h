@@ -62,6 +62,7 @@
 
 
 #define didMoveToSuperview viewDidMoveToSuperview
+#define didMoveToWindow viewDidMoveToWindow
 
 
 #define colorWithRed colorWithSRGBRed
