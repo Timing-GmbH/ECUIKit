@@ -65,9 +65,9 @@
 #define didMoveToWindow viewDidMoveToWindow
 
 
-#define colorWithRed colorWithSRGBRed
-#define ECRGBCOLOR(r,g,b) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define ECRGBACOLOR(r,g,b,a) [ECColor colorWithSRGBRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define colorWithRed colorWithCalibratedRed
+#define ECRGBCOLOR(r,g,b) [ECColor colorWithCalibratedRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define ECRGBACOLOR(r,g,b,a) [ECColor colorWithCalibratedRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 #endif
 
