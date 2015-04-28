@@ -13,15 +13,15 @@
 #define ECLOGLEVEL_ERROR    1
 
 #ifndef ECMAXLOGLEVEL
+#ifdef DEBUG
 #define ECMAXLOGLEVEL ECLOGLEVEL_INFO
+#else
+#define ECMAXLOGLEVEL ECLOGLEVEL_WARNING
+#endif
 #endif
 
 // The general purpose logger. This ignores logging levels.
-#ifdef DEBUG
 #define ECPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#else
-#define ECPRINT(xx, ...)  ((void)0)
-#endif // #ifdef DEBUG
 
 // Debug-only assertions.
 // Log-level based logging macros.
