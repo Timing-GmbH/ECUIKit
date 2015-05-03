@@ -11,9 +11,24 @@
 #import "ECUIKit.h"
 
 #if !TARGET_OS_IPHONE
-CGContextRef UIGraphicsGetCurrentContext();
-void UIGraphicsPushContext(CGContextRef context);
-void UIGraphicsPopContext();
+
+static CGContextRef UIGraphicsGetCurrentContext()
+{
+	return (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
+}
+
+static void UIGraphicsPushContext(CGContextRef context)
+{
+	[NSGraphicsContext saveGraphicsState];
+	NSGraphicsContext *nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:context flipped:YES];
+	[NSGraphicsContext setCurrentContext:nscg];
+}
+
+static void UIGraphicsPopContext()
+{
+	[NSGraphicsContext restoreGraphicsState];
+}
+
 #else
 #import <UIKit/UIKit.h>
 #endif
