@@ -87,7 +87,6 @@
 #import <UIKit/UIKit.h>
 #else
 #import "NSFont+ECUIKit.h"
-#import "NSString+ECUIKit.h"
 #import "NSBezierPath+ECUIKit.h"
 #import "NSValue+ECUIKit.h"
 #import "NSOpenGLContext+ECUIKit.h"
@@ -99,3 +98,5 @@
 #import "ECPrintPageRenderer.h"
 #import "ECPrintFormatter.h"
 #endif
+
+#import "NSString+ECUIKit.h"

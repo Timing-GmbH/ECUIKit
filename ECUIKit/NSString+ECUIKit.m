@@ -8,46 +8,65 @@
 
 #import "NSString+ECUIKit.h"
 
-#import <objc/runtime.h>
+static CGSize ECCGSizeMakeIntegral(CGFloat width, CGFloat height)
+{
+	return CGSizeMake(ceilf(width), ceilf(height));
+}
+static CGSize ECCGSizeIntegralize(CGSize size)
+{
+	return ECCGSizeMakeIntegral(size.width, size.height);
+}
 
 #pragma mark - NSString (ECUIKit)
 
 @implementation NSString (ECUIKit)
 
-- (CGSize)sizeWithFont:(NSFont *)font
+- (CGSize)ec_sizeWithFont:(ECFont *)font
 {
-	return [self sizeWithAttributes:@{ NSFontAttributeName : font }];
+	return ECCGSizeIntegralize([self sizeWithAttributes:@{ NSFontAttributeName : font }]);
 }
-- (CGSize)sizeWithFont:(NSFont *)font constrainedToSize:(CGSize)size
+- (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size
 {
-	return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font }].size;
+	return ECCGSizeIntegralize([self boundingRectWithSize:size
+												  options:NSStringDrawingUsesLineFragmentOrigin
+											   attributes:@{ NSFontAttributeName : font }
+												  context:nil].size);
+}
+- (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode
+{
+	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+	paragraphStyle.lineBreakMode = lineBreakMode;
+	return ECCGSizeIntegralize([self boundingRectWithSize:size
+												  options:NSStringDrawingUsesLineFragmentOrigin
+											   attributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }
+												  context:nil].size);
 }
 
-- (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font
+- (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font
 {
 	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font }];
-	return [self sizeWithFont:font];
+	return [self ec_sizeWithFont:font];
 }
 
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font
 {
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font }];
-	return [self sizeWithFont:font constrainedToSize:rect.size];
+	return [self ec_sizeWithFont:font constrainedToSize:rect.size];
 }
 
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font andColor:(NSColor *)color
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font andColor:(ECColor *)color
 {
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }];
-	return [self sizeWithFont:font];
+	return [self ec_sizeWithFont:font];
 }
 
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment
 {
 	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 	paragraphStyle.lineBreakMode = lineBreakMode;
 	paragraphStyle.alignment = alignment;
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }];
-	return [self sizeWithFont:font];
+	return [self ec_sizeWithFont:font];
 }
 
 @end

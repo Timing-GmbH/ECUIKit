@@ -38,6 +38,9 @@
 		65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E85E6017954598008C4B2B /* NSOpenGLContext+ECUIKit.m */; };
 		65ED4B41179B163F00558684 /* NSTableView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */; };
 		65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */; };
+		65FE5B4B1C72340100F49296 /* ECUIKitIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65FE5B4A1C72340100F49296 /* ECUIKitIOS.h */; };
+		65FE5B4D1C72340100F49296 /* ECUIKitIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FE5B4C1C72340100F49296 /* ECUIKitIOS.m */; };
+		65FE5B511C72342C00F49296 /* NSString+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810F017859F8B00574613 /* NSString+ECUIKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,19 @@
 			remoteInfo = ECUIKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65FE5B461C72340100F49296 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				65FE5B4B1C72340100F49296 /* ECUIKitIOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		655810B517859DFC00574613 /* libECUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +104,9 @@
 		65E85E6017954598008C4B2B /* NSOpenGLContext+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOpenGLContext+ECUIKit.m"; sourceTree = "<group>"; };
 		65ED4B3F179B163F00558684 /* NSTableView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ECUIKit.h"; sourceTree = "<group>"; };
 		65ED4B40179B163F00558684 /* NSTableView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ECUIKit.m"; sourceTree = "<group>"; };
+		65FE5B481C72340100F49296 /* libECUIKitIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECUIKitIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FE5B4A1C72340100F49296 /* ECUIKitIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECUIKitIOS.h; sourceTree = "<group>"; };
+		65FE5B4C1C72340100F49296 /* ECUIKitIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECUIKitIOS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +128,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65FE5B451C72340100F49296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,6 +143,7 @@
 			children = (
 				655810BE17859DFC00574613 /* ECUIKit */,
 				655810CF17859DFC00574613 /* ECUIKitTests */,
+				65FE5B491C72340100F49296 /* ECUIKitIOS */,
 				655810B717859DFC00574613 /* Frameworks */,
 				655810B617859DFC00574613 /* Products */,
 			);
@@ -127,6 +154,7 @@
 			children = (
 				655810B517859DFC00574613 /* libECUIKit.a */,
 				655810C817859DFC00574613 /* ECUIKitTests.xctest */,
+				65FE5B481C72340100F49296 /* libECUIKitIOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +239,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		65FE5B491C72340100F49296 /* ECUIKitIOS */ = {
+			isa = PBXGroup;
+			children = (
+				65FE5B4A1C72340100F49296 /* ECUIKitIOS.h */,
+				65FE5B4C1C72340100F49296 /* ECUIKitIOS.m */,
+			);
+			path = ECUIKitIOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -272,6 +309,23 @@
 			productReference = 655810C817859DFC00574613 /* ECUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		65FE5B471C72340100F49296 /* ECUIKitIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65FE5B501C72340100F49296 /* Build configuration list for PBXNativeTarget "ECUIKitIOS" */;
+			buildPhases = (
+				65FE5B441C72340100F49296 /* Sources */,
+				65FE5B451C72340100F49296 /* Frameworks */,
+				65FE5B461C72340100F49296 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECUIKitIOS;
+			productName = ECUIKitIOS;
+			productReference = 65FE5B481C72340100F49296 /* libECUIKitIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,6 +334,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = EUROCOMP;
+				TargetAttributes = {
+					65FE5B471C72340100F49296 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
 			};
 			buildConfigurationList = 655810B017859DFC00574613 /* Build configuration list for PBXProject "ECUIKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -294,6 +353,7 @@
 			projectRoot = "";
 			targets = (
 				655810B417859DFC00574613 /* ECUIKit */,
+				65FE5B471C72340100F49296 /* ECUIKitIOS */,
 				655810C717859DFC00574613 /* ECUIKitTests */,
 			);
 		};
@@ -335,6 +395,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				655810D617859DFC00574613 /* ECUIKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65FE5B441C72340100F49296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65FE5B511C72342C00F49296 /* NSString+ECUIKit.m in Sources */,
+				65FE5B4D1C72340100F49296 /* ECUIKitIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +551,46 @@
 			};
 			name = Release;
 		};
+		65FE5B4E1C72340100F49296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65FE5B4F1C72340100F49296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +620,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		65FE5B501C72340100F49296 /* Build configuration list for PBXNativeTarget "ECUIKitIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65FE5B4E1C72340100F49296 /* Debug */,
+				65FE5B4F1C72340100F49296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

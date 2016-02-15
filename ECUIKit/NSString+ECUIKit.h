@@ -7,15 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#endif
+
+#import "ECUIKit.h"
 
 @interface NSString (ECUIKit)
 
-- (CGSize)sizeWithFont:(NSFont *)font;
-- (CGSize)sizeWithFont:(NSFont *)font constrainedToSize:(CGSize)size;
+- (CGSize)ec_sizeWithFont:(ECFont *)font;
+- (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size;
+- (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode;
 
-- (CGSize)drawAtPoint:(CGPoint)point withFont:(NSFont *)font;
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font;
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font andColor:(NSColor *)color;
-- (CGSize)drawInRect:(CGRect)rect withFont:(NSFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
+- (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font;
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font;
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font andColor:(ECColor *)color;
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
 
 @end
