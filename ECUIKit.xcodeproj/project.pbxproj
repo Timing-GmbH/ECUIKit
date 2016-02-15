@@ -21,6 +21,8 @@
 		655811071785AC1800574613 /* ECLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 655811051785AC1800574613 /* ECLog.h */; };
 		65749433178D7EB5002BE75B /* NSValue+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 65749431178D7EB5002BE75B /* NSValue+ECUIKit.h */; };
 		65749434178D7EB5002BE75B /* NSValue+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65749432178D7EB5002BE75B /* NSValue+ECUIKit.m */; };
+		6589AAA51C723C9A00975CA4 /* ECCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */; };
+		6589AAA61C723C9A00975CA4 /* ECCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */; };
 		659362A7178B1C360033571C /* NSView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 659362A5178B1C360033571C /* NSView+ECUIKit.h */; };
 		659362A8178B1C360033571C /* NSView+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659362A6178B1C360033571C /* NSView+ECUIKit.m */; };
 		659362AB178B1C640033571C /* NSScrollView+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */; };
@@ -87,6 +89,7 @@
 		655811051785AC1800574613 /* ECLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLog.h; sourceTree = "<group>"; };
 		65749431178D7EB5002BE75B /* NSValue+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+ECUIKit.h"; sourceTree = "<group>"; };
 		65749432178D7EB5002BE75B /* NSValue+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ECUIKit.m"; sourceTree = "<group>"; };
+		6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCoreGraphics.m; sourceTree = "<group>"; };
 		659362A5178B1C360033571C /* NSView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ECUIKit.h"; sourceTree = "<group>"; };
 		659362A6178B1C360033571C /* NSView+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ECUIKit.m"; sourceTree = "<group>"; };
 		659362A9178B1C640033571C /* NSScrollView+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScrollView+ECUIKit.h"; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				65B364FD17A150B600DB7C53 /* ECPrintFormatter.m */,
 				65C0CA0F17D48E8600984528 /* ECCoreGraphics.h */,
 				655810BF17859DFC00574613 /* Supporting Files */,
+				6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */,
 			);
 			path = ECUIKit;
 			sourceTree = "<group>";
@@ -382,6 +386,7 @@
 				65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */,
 				65B8AFD51791721600085F8F /* NSButton+ECUIKit.m in Sources */,
 				65DEE03C178C5062007D63AC /* NSBezierPath+ECUIKit.m in Sources */,
+				6589AAA51C723C9A00975CA4 /* ECCoreGraphics.m in Sources */,
 				65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */,
 				655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */,
 				655810EE17859EEE00574613 /* NSFont+ECUIKit.m in Sources */,
@@ -404,6 +409,7 @@
 			files = (
 				65FE5B511C72342C00F49296 /* NSString+ECUIKit.m in Sources */,
 				65FE5B4D1C72340100F49296 /* ECUIKitIOS.m in Sources */,
+				6589AAA61C723C9A00975CA4 /* ECCoreGraphics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +634,7 @@
 				65FE5B4F1C72340100F49296 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
