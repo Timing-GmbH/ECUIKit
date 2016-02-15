@@ -18,8 +18,10 @@
 #define ECScrollView UIScrollView
 #define ECBezierPath UIBezierPath
 
+#ifndef ECRGBCOLOR
 #define ECRGBCOLOR(r,g,b) [ECColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define ECRGBACOLOR(r,g,b,a) [ECColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#endif
 
 #else
 
