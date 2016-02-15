@@ -1,0 +1,14 @@
+.DS_Store
+build
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+*.xcuserstate
+.svn
+DerivedData
+.git-revision
+.git-version
+ReceiptValidation/iOS/include
+ReceiptValidation/iOS/lib
+*.xcodeproj/xcuserdata
+*.xcworkspace/xcuserdata
