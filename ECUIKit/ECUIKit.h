@@ -34,6 +34,12 @@
 
 
 #define UIFont ECFont
+#define UIFontWeightThin NSFontWeightThin
+#define UIFontWeightLight NSFontWeightLight
+#define UIFontWeightRegular NSFontWeightRegular
+#define UIFontWeightMedium NSFontWeightMedium
+#define UIFontWeightBold NSFontWeightBold
+
 #define UIImage ECImage
 #define UIColor ECColor
 #define UIBezierPath ECBezierPath
