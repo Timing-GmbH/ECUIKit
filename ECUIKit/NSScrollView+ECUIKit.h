@@ -10,7 +10,7 @@
 
 @interface ECScrollView : NSScrollView
 
-@property (nonatomic) CGSize contentSize;
-@property (nonatomic) CGPoint contentOffset;
+@property (readwrite) CGSize contentSize;
+@property (readwrite) CGPoint contentOffset;
 
 @end
