@@ -59,10 +59,6 @@
 #define UIEdgeInsets NSEdgeInsets
 #define UIEdgeInsetsMake(a, b, c, d) NSEdgeInsetsMake(a, b, c, d)
 
-#define NSTextAlignmentLeft NSLeftTextAlignment
-#define NSTextAlignmentRight NSRightTextAlignment
-#define NSTextAlignmentCenter NSCenterTextAlignment
-
 #define EAGLContext NSOpenGLContext
 #define glGenVertexArraysOES glGenVertexArrays
 #define glBindVertexArrayOES glBindVertexArray
