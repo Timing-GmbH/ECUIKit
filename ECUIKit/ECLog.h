@@ -28,17 +28,17 @@
 #if ECLOGLEVEL_ERROR <= ECMAXLOGLEVEL
 #define ECERROR(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
 #else
-#define ECERROR(xx, ...)  ((void)0)
+#define ECERROR(xx, ...)  ((void) (0, ##__VA_ARGS__))
 #endif // #if ECLOGLEVEL_ERROR <= ECMAXLOGLEVEL
 
 #if ECLOGLEVEL_WARNING <= ECMAXLOGLEVEL
 #define ECWARNING(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
 #else
-#define ECWARNING(xx, ...)  ((void)0)
+#define ECWARNING(xx, ...)  ((void) (0, ##__VA_ARGS__))
 #endif // #if ECLOGLEVEL_WARNING <= ECMAXLOGLEVEL
 
 #if ECLOGLEVEL_INFO <= ECMAXLOGLEVEL
 #define ECINFO(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
 #else
-#define ECINFO(xx, ...)  ((void)0)
+#define ECINFO(xx, ...)  ((void) (0, ##__VA_ARGS__))
 #endif // #if ECLOGLEVEL_INFO <= ECMAXLOGLEVEL
