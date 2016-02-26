@@ -16,7 +16,7 @@
     if (animated){
         NSRect rowRect = [self rectOfRow:rowIndex];
         NSPoint scrollOrigin = rowRect.origin;
-        NSClipView *clipView = (NSClipView *)[self superview];
+        NSClipView *clipView = (NSClipView *)self.superview;
         scrollOrigin.y += MAX(0, round((NSHeight(rowRect) - NSHeight(clipView.frame)) * 0.5f));
         [[clipView animator] setBoundsOrigin:scrollOrigin];
     }

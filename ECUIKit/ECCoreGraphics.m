@@ -12,7 +12,7 @@
 
 CGContextRef UIGraphicsGetCurrentContext()
 {
-	return (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
+	return (CGContextRef)[NSGraphicsContext currentContext].graphicsPort;
 }
 
 void UIGraphicsPushContext(CGContextRef context)
