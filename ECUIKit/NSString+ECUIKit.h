@@ -20,8 +20,11 @@
 - (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode;
 
 - (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font;
+- (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font andColor:(ECColor *)color;
+
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font;
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font andColor:(ECColor *)color;
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment color:(ECColor *)color;
 
 @end

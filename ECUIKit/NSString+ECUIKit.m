@@ -48,6 +48,12 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 	return [self ec_sizeWithFont:font];
 }
 
+- (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font andColor:(ECColor *)color
+{
+	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }];
+	return [self ec_sizeWithFont:font];
+}
+
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font
 {
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font }];
@@ -66,6 +72,15 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 	paragraphStyle.lineBreakMode = lineBreakMode;
 	paragraphStyle.alignment = alignment;
 	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }];
+	return [self ec_sizeWithFont:font];
+}
+
+- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment color:(ECColor *)color
+{
+	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+	paragraphStyle.lineBreakMode = lineBreakMode;
+	paragraphStyle.alignment = alignment;
+	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : color }];
 	return [self ec_sizeWithFont:font];
 }
 
