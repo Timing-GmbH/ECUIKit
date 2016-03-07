@@ -26,6 +26,16 @@
 // Debug-only assertions.
 // Log-level based logging macros.
 #if ECLOGLEVEL_ERROR <= ECMAXLOGLEVEL
+#ifdef DEBUG
+#define ECDFATAL(xx, ...)  NSAssert(false, xx, ##__VA_ARGS__)
+#else
+#define ECDFATAL(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
+#endif
+#else
+#define ECDFATAL(xx, ...)  ((void) (0, ##__VA_ARGS__))
+#endif // #if ECLOGLEVEL_ERROR <= ECMAXLOGLEVEL
+
+#if ECLOGLEVEL_ERROR <= ECMAXLOGLEVEL
 #define ECERROR(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
 #else
 #define ECERROR(xx, ...)  ((void) (0, ##__VA_ARGS__))
