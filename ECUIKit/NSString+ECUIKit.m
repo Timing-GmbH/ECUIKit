@@ -27,19 +27,30 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 }
 - (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size
 {
-	return ECCGSizeIntegralize([self boundingRectWithSize:size
-												  options:NSStringDrawingUsesLineFragmentOrigin
-											   attributes:@{ NSFontAttributeName : font }
-												  context:nil].size);
+	return [self ec_sizeWithFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
 }
 - (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode
 {
 	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 	paragraphStyle.lineBreakMode = lineBreakMode;
+#if TARGET_OS_IPHONE
 	return ECCGSizeIntegralize([self boundingRectWithSize:size
 												  options:NSStringDrawingUsesLineFragmentOrigin
-											   attributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }
+											   attributes:@{ NSFontAttributeName : font,
+															 NSParagraphStyleAttributeName : paragraphStyle }
 												  context:nil].size);
+#else
+	NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:
+								  [[NSAttributedString alloc] initWithString:self
+																  attributes:@{ NSFontAttributeName : font,
+																				NSParagraphStyleAttributeName : paragraphStyle }]];
+	NSTextContainer *textContainer = [[NSTextContainer alloc] initWithContainerSize:size];
+	NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
+	[layoutManager addTextContainer:textContainer];
+	[textStorage addLayoutManager:layoutManager];
+	[layoutManager glyphRangeForTextContainer:textContainer];
+	return [layoutManager usedRectForTextContainer:textContainer].size;
+#endif
 }
 
 - (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font
