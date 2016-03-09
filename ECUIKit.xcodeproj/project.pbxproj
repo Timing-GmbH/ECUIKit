@@ -74,7 +74,6 @@
 		655810BB17859DFC00574613 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		655810BC17859DFC00574613 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		655810BD17859DFC00574613 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		655810C017859DFC00574613 /* ECUIKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECUIKit-Prefix.pch"; sourceTree = "<group>"; };
 		655810C117859DFC00574613 /* ECUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECUIKit.h; sourceTree = "<group>"; };
 		655810C217859DFC00574613 /* ECUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECUIKit.m; sourceTree = "<group>"; };
 		655810C817859DFC00574613 /* ECUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +219,6 @@
 		655810BF17859DFC00574613 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				655810C017859DFC00574613 /* ECUIKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
