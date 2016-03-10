@@ -67,13 +67,25 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font
 {
-	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font }];
+	[self drawWithRect:rect
+			   options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics)
+			attributes:@{ NSFontAttributeName : font }
+#if TARGET_OS_IPHONE
+			   context:nil
+#endif
+	 ];
 	return [self ec_sizeWithFont:font constrainedToSize:rect.size];
 }
 
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font andColor:(ECColor *)color
 {
-	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }];
+	[self drawWithRect:rect
+			   options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics)
+			attributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }
+#if TARGET_OS_IPHONE
+			   context:nil
+#endif
+	 ];
 	return [self ec_sizeWithFont:font];
 }
 
@@ -82,7 +94,13 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 	paragraphStyle.lineBreakMode = lineBreakMode;
 	paragraphStyle.alignment = alignment;
-	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }];
+	[self drawWithRect:rect
+			   options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics)
+			attributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle }
+#if TARGET_OS_IPHONE
+			   context:nil
+#endif
+	 ];
 	return [self ec_sizeWithFont:font];
 }
 
@@ -91,7 +109,13 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 	paragraphStyle.lineBreakMode = lineBreakMode;
 	paragraphStyle.alignment = alignment;
-	[self drawInRect:rect withAttributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : color }];
+	[self drawWithRect:rect
+			   options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics)
+			attributes:@{ NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : color }
+#if TARGET_OS_IPHONE
+			   context:nil
+#endif
+	 ];
 	return [self ec_sizeWithFont:font];
 }
 
