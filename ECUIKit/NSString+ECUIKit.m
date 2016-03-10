@@ -33,24 +33,15 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 {
 	NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 	paragraphStyle.lineBreakMode = lineBreakMode;
-#if TARGET_OS_IPHONE
+
 	return ECCGSizeIntegralize([self boundingRectWithSize:size
 												  options:NSStringDrawingUsesLineFragmentOrigin
 											   attributes:@{ NSFontAttributeName : font,
 															 NSParagraphStyleAttributeName : paragraphStyle }
-												  context:nil].size);
-#else
-	NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:
-								  [[NSAttributedString alloc] initWithString:self
-																  attributes:@{ NSFontAttributeName : font,
-																				NSParagraphStyleAttributeName : paragraphStyle }]];
-	NSTextContainer *textContainer = [[NSTextContainer alloc] initWithContainerSize:size];
-	NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
-	[layoutManager addTextContainer:textContainer];
-	[textStorage addLayoutManager:layoutManager];
-	[layoutManager glyphRangeForTextContainer:textContainer];
-	return [layoutManager usedRectForTextContainer:textContainer].size;
+#if TARGET_OS_IPHONE
+												  context:nil
 #endif
+								].size);
 }
 
 - (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font
