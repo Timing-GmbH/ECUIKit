@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#define ECLOGLEVEL_VERBOSE  10
 #define ECLOGLEVEL_INFO     5
 #define ECLOGLEVEL_WARNING  3
 #define ECLOGLEVEL_ERROR    1
@@ -52,3 +53,9 @@
 #else
 #define ECINFO(xx, ...)  ((void) (0, ##__VA_ARGS__))
 #endif // #if ECLOGLEVEL_INFO <= ECMAXLOGLEVEL
+
+#if ECLOGLEVEL_VERBOSE <= ECMAXLOGLEVEL
+#define ECVERBOSE(xx, ...)  ECPRINT(xx, ##__VA_ARGS__)
+#else
+#define ECVERBOSE(xx, ...)  ((void) (0, ##__VA_ARGS__))
+#endif // #if ECLOGLEVEL_VERBOSE <= ECMAXLOGLEVEL
