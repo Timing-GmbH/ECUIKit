@@ -30,7 +30,7 @@
 				 animations:(void (^)(void))animations
 				 completion:(void (^)(BOOL finished))completion
 {
-	void (^animationBlock)() = ^{
+	void (^animationBlock)(void) = ^{
 		[NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
 			context.allowsImplicitAnimation = YES;
 			context.duration = duration;

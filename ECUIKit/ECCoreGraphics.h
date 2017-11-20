@@ -12,11 +12,11 @@
 
 #if !TARGET_OS_IPHONE
 
-CGContextRef UIGraphicsGetCurrentContext();
+CGContextRef UIGraphicsGetCurrentContext(void);
 
 void UIGraphicsPushContext(CGContextRef context);
 
-void UIGraphicsPopContext();
+void UIGraphicsPopContext(void);
 
 #else
 #import <UIKit/UIKit.h>
