@@ -15,6 +15,8 @@
 
 @interface NSString (ECUIKit)
 
+- (NSComparisonResult)ec_versionStringCompare:(NSString *)other;
+
 - (CGSize)ec_sizeWithFont:(ECFont *)font;
 - (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size;
 - (CGSize)ec_sizeWithFont:(ECFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode;

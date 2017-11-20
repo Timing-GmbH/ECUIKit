@@ -22,6 +22,8 @@ void UIGraphicsPopContext();
 #import <UIKit/UIKit.h>
 #endif
 
-UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, void (^drawBlock)());
+typedef void (^ECUIKitDrawingBlock)(void);
 
-NSData *ECDrawPDFUsingBlock(CGSize size, void (^drawBlock)());
+UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitDrawingBlock drawBlock);
+
+NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock);
