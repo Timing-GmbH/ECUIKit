@@ -29,7 +29,7 @@ void UIGraphicsPopContext()
 
 #endif
 
-UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, void (^drawBlock)())
+UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitDrawingBlock drawBlock)
 {
 #if TARGET_OS_IPHONE
 	UIGraphicsBeginImageContextWithOptions(size, opaque, scale);
@@ -68,7 +68,7 @@ UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, void (^d
 	return image;
 }
 
-NSData *ECDrawPDFUsingBlock(CGSize size, void (^drawBlock)())
+NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 {
 	NSMutableData *data = [NSMutableData data];
 	CGRect pdfRect = (CGRect){ CGPointZero, size };
