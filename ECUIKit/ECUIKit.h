@@ -96,3 +96,5 @@
 #endif
 
 #import "NSString+ECUIKit.h"
+
+#import "ECColor.h"

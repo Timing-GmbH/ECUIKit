@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654D73752157DD43006864FE /* ECColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 654D73732157DD43006864FE /* ECColor.h */; };
+		654D73762157DD43006864FE /* ECColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 654D73742157DD43006864FE /* ECColor.m */; };
+		654D73772157DD43006864FE /* ECColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 654D73742157DD43006864FE /* ECColor.m */; };
 		655810B917859DFC00574613 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655810B817859DFC00574613 /* Cocoa.framework */; };
 		655810C317859DFC00574613 /* ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810C217859DFC00574613 /* ECUIKit.m */; };
 		655810CA17859DFC00574613 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655810C917859DFC00574613 /* XCTest.framework */; };
@@ -69,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		654D73732157DD43006864FE /* ECColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECColor.h; sourceTree = "<group>"; };
+		654D73742157DD43006864FE /* ECColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECColor.m; sourceTree = "<group>"; };
 		655810B517859DFC00574613 /* libECUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		655810B817859DFC00574613 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		655810BB17859DFC00574613 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -210,8 +215,10 @@
 				65B364FC17A150B600DB7C53 /* ECPrintFormatter.h */,
 				65B364FD17A150B600DB7C53 /* ECPrintFormatter.m */,
 				65C0CA0F17D48E8600984528 /* ECCoreGraphics.h */,
-				655810BF17859DFC00574613 /* Supporting Files */,
 				6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */,
+				654D73732157DD43006864FE /* ECColor.h */,
+				654D73742157DD43006864FE /* ECColor.m */,
+				655810BF17859DFC00574613 /* Supporting Files */,
 			);
 			path = ECUIKit;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 				655811071785AC1800574613 /* ECLog.h in Headers */,
 				655810F117859F8B00574613 /* NSString+ECUIKit.h in Headers */,
 				65749433178D7EB5002BE75B /* NSValue+ECUIKit.h in Headers */,
+				654D73752157DD43006864FE /* ECColor.h in Headers */,
 				65DEE03B178C5062007D63AC /* NSBezierPath+ECUIKit.h in Headers */,
 				659362AB178B1C640033571C /* NSScrollView+ECUIKit.h in Headers */,
 				655810ED17859EEE00574613 /* NSFont+ECUIKit.h in Headers */,
@@ -384,6 +392,7 @@
 				65ED4B42179B163F00558684 /* NSTableView+ECUIKit.m in Sources */,
 				65B8AFD51791721600085F8F /* NSButton+ECUIKit.m in Sources */,
 				65DEE03C178C5062007D63AC /* NSBezierPath+ECUIKit.m in Sources */,
+				654D73762157DD43006864FE /* ECColor.m in Sources */,
 				6589AAA51C723C9A00975CA4 /* ECCoreGraphics.m in Sources */,
 				65E85E6217954598008C4B2B /* NSOpenGLContext+ECUIKit.m in Sources */,
 				655810F217859F8B00574613 /* NSString+ECUIKit.m in Sources */,
@@ -408,6 +417,7 @@
 				65FE5B511C72342C00F49296 /* NSString+ECUIKit.m in Sources */,
 				65FE5B4D1C72340100F49296 /* ECUIKitIOS.m in Sources */,
 				6589AAA61C723C9A00975CA4 /* ECCoreGraphics.m in Sources */,
+				654D73772157DD43006864FE /* ECColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
