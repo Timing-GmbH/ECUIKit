@@ -79,28 +79,10 @@ static CGSize ECCGSizeIntegralize(CGSize size)
 								].size);
 }
 
-- (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font
-{
-	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font }];
-	return [self ec_sizeWithFont:font];
-}
-
 - (CGSize)ec_drawAtPoint:(CGPoint)point withFont:(ECFont *)font andColor:(ECColor *)color
 {
 	[self drawAtPoint:point withAttributes:@{ NSFontAttributeName : font, NSForegroundColorAttributeName : color }];
 	return [self ec_sizeWithFont:font];
-}
-
-- (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font
-{
-	[self drawWithRect:rect
-			   options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics)
-			attributes:@{ NSFontAttributeName : font }
-#if TARGET_OS_IPHONE
-			   context:nil
-#endif
-	 ];
-	return [self ec_sizeWithFont:font constrainedToSize:rect.size];
 }
 
 - (CGSize)ec_drawInRect:(CGRect)rect withFont:(ECFont *)font andColor:(ECColor *)color
