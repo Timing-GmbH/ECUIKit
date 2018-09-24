@@ -74,6 +74,7 @@
 /* Begin PBXFileReference section */
 		654D73732157DD43006864FE /* ECColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECColor.h; sourceTree = "<group>"; };
 		654D73742157DD43006864FE /* ECColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECColor.m; sourceTree = "<group>"; };
+		654D73782157E8D6006864FE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = SOURCE_ROOT; };
 		655810B517859DFC00574613 /* libECUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		655810B817859DFC00574613 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		655810BB17859DFC00574613 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -218,6 +219,7 @@
 				6589AAA41C723C9A00975CA4 /* ECCoreGraphics.m */,
 				654D73732157DD43006864FE /* ECColor.h */,
 				654D73742157DD43006864FE /* ECColor.m */,
+				654D73782157E8D6006864FE /* Colors.xcassets */,
 				655810BF17859DFC00574613 /* Supporting Files */,
 			);
 			path = ECUIKit;
