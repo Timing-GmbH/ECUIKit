@@ -22,7 +22,7 @@
 #if TARGET_OS_IPHONE
 	return [self blueColor];
 #else
-	return [self blueColor];
+	return [self systemBlueColor];
 #endif
 }
 
