@@ -22,7 +22,11 @@
 #if TARGET_OS_IPHONE
 	return [self blueColor];
 #else
-	return [self systemBlueColor];
+	if (@available(macOS 10.13, *)) {
+		return [UIColor colorNamed:@"customSystemBlue"];
+	} else {
+		return [self blueColor];
+	}
 #endif
 }
 
