@@ -41,8 +41,8 @@ UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitD
 	NSImage *image = [[NSImage alloc] initWithSize:size];
 	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc]
 							 initWithBitmapDataPlanes:NULL
-							 pixelsWide:size.width
-							 pixelsHigh:size.height
+							 pixelsWide:size.width ?: 1
+							 pixelsHigh:size.height ?: 1
 							 bitsPerSample:8
 							 samplesPerPixel:(opaque ? 3 : 4)
 							 hasAlpha:!opaque
