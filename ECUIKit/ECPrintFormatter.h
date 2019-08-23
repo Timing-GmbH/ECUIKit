@@ -16,7 +16,7 @@
 
 @property(nonatomic) CGFloat      maximumContentHeight;      // default is 0.0. limits content to width
 @property(nonatomic) CGFloat      maximumContentWidth;       // default is 0.0. limits content to height
-@property(nonatomic) UIEdgeInsets contentInsets;             // default is UIEdgeInsetsZero. from edge of printableRect. applies to whole content. bottom inset unused
+@property(nonatomic) UIEdgeInsets perPageContentInsets;             // default is UIEdgeInsetsZero. from edge of printableRect. applies to whole content. bottom inset unused
 
 @property(nonatomic)          NSInteger startPage;           // default is NSNotFound
 @property(nonatomic,readonly) NSInteger pageCount;           // calculated
