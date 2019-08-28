@@ -32,11 +32,23 @@ void UIGraphicsPopContext()
 UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitDrawingBlock drawBlock)
 {
 #if TARGET_OS_IPHONE
+	UITraitCollection *previousTraitCollection;
+	if (@available(iOS 13.0, *)) {
+		previousTraitCollection = UITraitCollection.currentTraitCollection;
+		UITraitCollection.currentTraitCollection = [UITraitCollection traitCollectionWithUserInterfaceStyle:UIUserInterfaceStyleLight];
+	}
+	
 	UIGraphicsBeginImageContextWithOptions(size, opaque, scale);
+	[[UIColor whiteColor] setFill];
+	CGContextFillRect(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, size.width, size.height));
 	if (drawBlock)
 		drawBlock();
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
+	
+	if (@available(iOS 13.0, *)) {
+		UITraitCollection.currentTraitCollection = previousTraitCollection;
+	}
 #else
 	NSImage *image = [[NSImage alloc] initWithSize:size];
 	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc]
@@ -73,6 +85,12 @@ NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 	NSMutableData *data = [NSMutableData data];
 	CGRect pdfRect = (CGRect){ CGPointZero, size };
 #if TARGET_OS_IPHONE
+	UITraitCollection *previousTraitCollection;
+	if (@available(iOS 13.0, *)) {
+		previousTraitCollection = UITraitCollection.currentTraitCollection;
+		UITraitCollection.currentTraitCollection = [UITraitCollection traitCollectionWithUserInterfaceStyle:UIUserInterfaceStyleLight];
+	}
+	
 	UIGraphicsBeginPDFContextToData(data,
 									pdfRect,
 									nil);
@@ -80,6 +98,10 @@ NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 	if (drawBlock)
 		drawBlock();
 	UIGraphicsEndPDFContext();
+	
+	if (@available(iOS 13.0, *)) {
+		UITraitCollection.currentTraitCollection = previousTraitCollection;
+	}
 #else
 	CGDataConsumerRef dataConsumer = CGDataConsumerCreateWithCFData((__bridge CFMutableDataRef)data);
 	CGContextRef context = CGPDFContextCreate(dataConsumer, &pdfRect, NULL);
