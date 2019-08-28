@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, nonatomic, readonly) UIColor *ec_textColor;
 @property(class, nonatomic, readonly) UIColor *ec_secondaryLabelColor;
 
+@property(class, nonatomic, readonly) UIColor *ec_viewBackgroundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

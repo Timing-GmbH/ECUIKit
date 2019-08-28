@@ -25,6 +25,32 @@
         }
       ],
       "color" : {
+        "platform" : "ios",
+        "reference" : "systemBlueColor"
+      }
+    },
+    {
+      "idiom" : "mac",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.000",
+          "alpha" : "1.000",
+          "blue" : "1.000",
+          "green" : "0.000"
+        }
+      }
+    },
+    {
+      "idiom" : "mac",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "platform" : "osx",
         "reference" : "systemBlueColor"
       }
     }
