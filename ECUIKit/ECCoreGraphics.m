@@ -50,6 +50,11 @@ UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitD
 		UITraitCollection.currentTraitCollection = previousTraitCollection;
 	}
 #else
+	NSAppearance *previousAppearance = NSAppearance.currentAppearance;
+	if (@available(macOS 10.14, *)) {
+		NSAppearance.currentAppearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
+	}
+
 	NSImage *image = [[NSImage alloc] initWithSize:size];
 	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc]
 							 initWithBitmapDataPlanes:NULL
@@ -76,6 +81,10 @@ UIImage *ECDrawImageUsingBlock(CGSize size, BOOL opaque, CGFloat scale, ECUIKitD
 	UIGraphicsPopContext();
 
 	[image unlockFocus];
+
+	if (@available(macOS 10.14, *)) {
+		NSAppearance.currentAppearance = previousAppearance;
+	}
 #endif
 	return image;
 }
@@ -103,6 +112,11 @@ NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 		UITraitCollection.currentTraitCollection = previousTraitCollection;
 	}
 #else
+	NSAppearance *previousAppearance = NSAppearance.currentAppearance;
+	if (@available(macOS 10.14, *)) {
+		NSAppearance.currentAppearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
+	}
+
 	CGDataConsumerRef dataConsumer = CGDataConsumerCreateWithCFData((__bridge CFMutableDataRef)data);
 	CGContextRef context = CGPDFContextCreate(dataConsumer, &pdfRect, NULL);
 	CGPDFContextBeginPage(context, NULL);
@@ -120,6 +134,10 @@ NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 	CGPDFContextClose(context);
 	CGContextRelease(context);
 	CGDataConsumerRelease(dataConsumer);
+
+	if (@available(macOS 10.14, *)) {
+		NSAppearance.currentAppearance = previousAppearance;
+	}
 #endif
 	return data;
 }
