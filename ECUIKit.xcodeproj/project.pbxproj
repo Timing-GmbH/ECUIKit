@@ -15,7 +15,6 @@
 		655810CA17859DFC00574613 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655810C917859DFC00574613 /* XCTest.framework */; };
 		655810CB17859DFC00574613 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655810B817859DFC00574613 /* Cocoa.framework */; };
 		655810CE17859DFC00574613 /* libECUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655810B517859DFC00574613 /* libECUIKit.a */; };
-		655810D417859DFC00574613 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 655810D217859DFC00574613 /* InfoPlist.strings */; };
 		655810D617859DFC00574613 /* ECUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810D517859DFC00574613 /* ECUIKitTests.m */; };
 		655810ED17859EEE00574613 /* NSFont+ECUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 655810EB17859EEE00574613 /* NSFont+ECUIKit.h */; };
 		655810EE17859EEE00574613 /* NSFont+ECUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 655810EC17859EEE00574613 /* NSFont+ECUIKit.m */; };
@@ -85,7 +84,6 @@
 		655810C817859DFC00574613 /* ECUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		655810C917859DFC00574613 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		655810D117859DFC00574613 /* ECUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECUIKitTests-Info.plist"; sourceTree = "<group>"; };
-		655810D317859DFC00574613 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		655810D517859DFC00574613 /* ECUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECUIKitTests.m; sourceTree = "<group>"; };
 		655810EB17859EEE00574613 /* NSFont+ECUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+ECUIKit.h"; sourceTree = "<group>"; };
 		655810EC17859EEE00574613 /* NSFont+ECUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+ECUIKit.m"; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				655810D117859DFC00574613 /* ECUIKitTests-Info.plist */,
-				655810D217859DFC00574613 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -377,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655810D417859DFC00574613 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,17 +429,6 @@
 			targetProxy = 655810CC17859DFC00574613 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		655810D217859DFC00574613 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				655810D317859DFC00574613 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		655810D717859DFC00574613 /* Debug */ = {
