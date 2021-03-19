@@ -128,8 +128,6 @@ NSData *ECDrawPDFUsingBlock(CGSize size, ECUIKitDrawingBlock drawBlock)
 		drawBlock();
 	UIGraphicsPopContext();
 
-	[NSGraphicsContext restoreGraphicsState];
-
 	CGPDFContextEndPage(context);
 	CGPDFContextClose(context);
 	CGContextRelease(context);
